@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # Installiert die Konfiguration direkt, damit sie sofort nach einem git pull aktiviert werden kann
 
 set -euo pipefail
