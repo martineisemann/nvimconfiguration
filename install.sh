@@ -1,6 +1,6 @@
+#!/usr/bin/env bash
 # Installiert die Konfiguration direkt, damit sie sofort nach einem git pull aktiviert werden kann
 
-#!/usr/bin/env bash
 set -euo pipefail
 
 # 1. Verzeichnis des Skripts (also deines Repos)
