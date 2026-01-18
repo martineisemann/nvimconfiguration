@@ -36,5 +36,5 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Quick build of the current .cpp file (works only for single file projects)
 vim.api.nvim_create_user_command("Buildthis", function()
-    vim.cmd("!g++ -g -std=c++20 -O2 % -o %:r && ./%:r")
+    vim.cmd("!g++ -g -std=c++23 -O2 *.cpp -o output && ./output")
 end, {})
