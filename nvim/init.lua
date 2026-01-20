@@ -13,7 +13,7 @@ require('config.options')
 
 -- Colorscheme
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme kanagawa")
 
 -- Own commands --
 require('config.commands')
