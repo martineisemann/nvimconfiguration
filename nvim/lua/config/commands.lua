@@ -40,5 +40,5 @@ vim.api.nvim_create_user_command("Buildthis", function()
     vim.cmd("wall")
 
     -- compile and execute
-    vim.cmd("!g++ -g -std=c++23 -O2 *.cpp -o output && ./output")
+    vim.cmd("!g++ -g -std=c++23 -O2 *.cpp -o output.out && ./output.out")
 end, {})
