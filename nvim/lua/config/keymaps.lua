@@ -11,6 +11,10 @@ vim.keymap.set('n', '<leader>c', 'gcip', { remap = true, desc = 'Un/Comment whol
 vim.keymap.set('n', '<leader>f', ':NvimTreeFindFileToggle<CR>', { desc = 'Open file explorer with <leader>f' })
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { desc = 'Unhighlight any search results' })
 vim.keymap.set('n', '<leader>r', ':reg<CR>', { desc = 'Open registers' })
+vim.keymap.set('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>', { desc = 'Rename a function' })
+vim.keymap.set('n', '<leader>b', ':Buildthis<CR>',
+    { desc = 'Quick build of the current project by compiling each .cpp file' })
+
 
 -- Ctrl Keys
 -- Zeile nach unten verschieben (Ctrl + j)
@@ -28,19 +32,19 @@ vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
 
 -- LuaSnip tab bindings
 vim.keymap.set({ "i", "s" }, "<Tab>", function()
-  local ls = require("luasnip")
-  if ls.expand_or_jumpable() then
-    return "<Plug>luasnip-expand-or-jump"
-  else
-    return "<Tab>"
-  end
+    local ls = require("luasnip")
+    if ls.expand_or_jumpable() then
+        return "<Plug>luasnip-expand-or-jump"
+    else
+        return "<Tab>"
+    end
 end, { expr = true, silent = true })
 
 vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
-  local ls = require("luasnip")
-  if ls.jumpable(-1) then
-    return "<Plug>luasnip-jump-prev"
-  else
-    return "<S-Tab>"
-  end
+    local ls = require("luasnip")
+    if ls.jumpable(-1) then
+        return "<Plug>luasnip-jump-prev"
+    else
+        return "<S-Tab>"
+    end
 end, { expr = true, silent = true })
